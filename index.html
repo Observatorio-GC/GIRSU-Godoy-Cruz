@@ -20,7 +20,7 @@
             margin: 0;
         }
         </style>
-       <title>GIRSU Godoy Cruz</title>
+        <title>GIRSU Godoy Cruz</title>
             <!-- Icono -->
        <link rel="icon" href="./images/favicon1.ico">
     </head>
@@ -49,7 +49,7 @@
         <script>
         var map = L.map('map', {
             zoomControl:false, maxZoom:28, minZoom:1
-        }).fitBounds([[-32.960453501326654,-68.91967428017257],[-32.8984267568758,-68.78752047851123]]);
+        }).fitBounds([[-32.99411356031221,-68.96394028198259],[-32.870063818964,-68.69963267865954]]);
         var hash = new L.Hash(map);
         map.attributionControl.setPrefix('<a href="https://github.com/tomchadwin/qgis2web" target="_blank">qgis2web</a> &middot; <a href="https://leafletjs.com" title="A JS library for interactive maps">Leaflet</a> &middot; <a href="https://qgis.org">QGIS</a>');
         var autolinker = new Autolinker({truncate: {length: 30, location: 'smart'}});
@@ -142,7 +142,6 @@
             maxNativeZoom: 18
         });
         layer_GoogleSatelital_0;
-        map.addLayer(layer_GoogleSatelital_0);
         map.createPane('pane_Argenmap_1');
         map.getPane('pane_Argenmap_1').style.zIndex = 401;
         var layer_Argenmap_1 = L.tileLayer('https://wms.ign.gob.ar/geoserver/gwc/service/tms/1.0.0/capabaseargenmap@EPSG:3857@png/{z}/{x}/{-y}.png', {
@@ -228,7 +227,7 @@
                     <tr>\
                         <td class="visible-with-data" id="Ubicacion" colspan="2"><strong>Ubicacion</strong><br />' + (feature.properties['Ubicacion'] !== null ? autolinker.link(String(feature.properties['Ubicacion']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
                     </tr>\
-                    <tr>\
+                     <tr>\
                        <td colspan="2">' + (feature.properties['images'] !== null ? '<img src="images/' + String(feature.properties['images']).replace(/[\\\/:]/g, '_').trim() + '">' : '') + '</td>\
                     </tr>\
                 </table>';
@@ -282,7 +281,7 @@
                     <tr>\
                         <td class="visible-with-data" id="Ubicacion" colspan="2"><strong>Ubicacion</strong><br />' + (feature.properties['Ubicacion'] !== null ? autolinker.link(String(feature.properties['Ubicacion']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
                     </tr>\
-                    <tr>\
+                   <tr>\
                        <td colspan="2">' + (feature.properties['images'] !== null ? '<img src="images/' + String(feature.properties['images']).replace(/[\\\/:]/g, '_').trim() + '">' : '') + '</td>\
                     </tr>\
                 </table>';
