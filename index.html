@@ -39,16 +39,17 @@
         <script src="js/labels.js"></script>
         <script src="js/leaflet.photon.js"></script>
         <script src="js/leaflet-measure.js"></script>
-        <script src="data/LimiteGC_2.js"></script>
-        <script src="data/Macrobasurales_3.js"></script>
-        <script src="data/Microbasurales_4.js"></script>
+        <script src="data/LimiteGC_1.js"></script>
+        <script src="data/Macrobasurales_2.js"></script>
+        <script src="data/Microbasurales_3.js"></script>
+        <script src="data/MicrobasuralesDispersos_4.js"></script>
         <script src="data/ContenedoresAiresdelOeste_5.js"></script>
         <script src="data/Puntosdevuelcotransitorio_6.js"></script>
         <script src="data/Generadores_7.js"></script>
         <script>
         var map = L.map('map', {
             zoomControl:false, maxZoom:28, minZoom:1
-        }).fitBounds([[-32.97214622894769,-68.94097326726998],[-32.889445176067426,-68.76476819838783]]);
+        }).fitBounds([[-32.96326221352416,-68.91868496724224],[-32.901237439127534,-68.7865311655809]]);
         var hash = new L.Hash(map);
         map.attributionControl.setPrefix('<a href="https://github.com/tomchadwin/qgis2web" target="_blank">qgis2web</a> &middot; <a href="https://leafletjs.com" title="A JS library for interactive maps">Leaflet</a> &middot; <a href="https://qgis.org">QGIS</a>');
         var autolinker = new Autolinker({truncate: {length: 30, location: 'smart'}});
@@ -142,19 +143,7 @@
         });
         layer_GoogleSatelital_0;
         map.addLayer(layer_GoogleSatelital_0);
-        map.createPane('pane_Argenmap_1');
-        map.getPane('pane_Argenmap_1').style.zIndex = 401;
-        var layer_Argenmap_1 = L.tileLayer('https://wms.ign.gob.ar/geoserver/gwc/service/tms/1.0.0/capabaseargenmap@EPSG:3857@png/{z}/{x}/{-y}.png', {
-            pane: 'pane_Argenmap_1',
-            opacity: 1.0,
-            attribution: '',
-            minZoom: 1,
-            maxZoom: 28,
-            minNativeZoom: 0,
-            maxNativeZoom: 18
-        });
-        layer_Argenmap_1;
-        function pop_LimiteGC_2(feature, layer) {
+        function pop_LimiteGC_1(feature, layer) {
             var popupContent = '<table>\
                     <tr>\
                         <td colspan="2">' + (feature.properties['qc_id'] !== null ? autolinker.link(String(feature.properties['qc_id']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
@@ -185,9 +174,9 @@
 			layer.bindPopup(content, { maxHeight: 400 });
         }
 
-        function style_LimiteGC_2_0() {
+        function style_LimiteGC_1_0() {
             return {
-                pane: 'pane_LimiteGC_2',
+                pane: 'pane_LimiteGC_1',
                 opacity: 1,
                 color: 'rgba(0,0,0,1.0)',
                 dashArray: '',
@@ -198,21 +187,21 @@
                 interactive: true,
             }
         }
-        map.createPane('pane_LimiteGC_2');
-        map.getPane('pane_LimiteGC_2').style.zIndex = 402;
-        map.getPane('pane_LimiteGC_2').style['mix-blend-mode'] = 'normal';
-        var layer_LimiteGC_2 = new L.geoJson(json_LimiteGC_2, {
+        map.createPane('pane_LimiteGC_1');
+        map.getPane('pane_LimiteGC_1').style.zIndex = 401;
+        map.getPane('pane_LimiteGC_1').style['mix-blend-mode'] = 'normal';
+        var layer_LimiteGC_1 = new L.geoJson(json_LimiteGC_1, {
             attribution: '',
             interactive: true,
-            dataVar: 'json_LimiteGC_2',
-            layerName: 'layer_LimiteGC_2',
-            pane: 'pane_LimiteGC_2',
-            onEachFeature: pop_LimiteGC_2,
-            style: style_LimiteGC_2_0,
+            dataVar: 'json_LimiteGC_1',
+            layerName: 'layer_LimiteGC_1',
+            pane: 'pane_LimiteGC_1',
+            onEachFeature: pop_LimiteGC_1,
+            style: style_LimiteGC_1_0,
         });
-        bounds_group.addLayer(layer_LimiteGC_2);
-        map.addLayer(layer_LimiteGC_2);
-        function pop_Macrobasurales_3(feature, layer) {
+        bounds_group.addLayer(layer_LimiteGC_1);
+        map.addLayer(layer_LimiteGC_1);
+        function pop_Macrobasurales_2(feature, layer) {
             var popupContent = '<table>\
                     <tr>\
                         <td class="visible-with-data" id="Nombre" colspan="2"><strong>Nombre</strong><br />' + (feature.properties['Nombre'] !== null ? autolinker.link(String(feature.properties['Nombre']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
@@ -237,9 +226,9 @@
 			layer.bindPopup(content, { maxHeight: 400 });
         }
 
-        function style_Macrobasurales_3_0() {
+        function style_Macrobasurales_2_0() {
             return {
-                pane: 'pane_Macrobasurales_3',
+                pane: 'pane_Macrobasurales_2',
                 opacity: 1,
                 color: 'rgba(35,35,35,1.0)',
                 dashArray: '',
@@ -252,21 +241,21 @@
                 interactive: true,
             }
         }
-        map.createPane('pane_Macrobasurales_3');
-        map.getPane('pane_Macrobasurales_3').style.zIndex = 403;
-        map.getPane('pane_Macrobasurales_3').style['mix-blend-mode'] = 'normal';
-        var layer_Macrobasurales_3 = new L.geoJson(json_Macrobasurales_3, {
+        map.createPane('pane_Macrobasurales_2');
+        map.getPane('pane_Macrobasurales_2').style.zIndex = 402;
+        map.getPane('pane_Macrobasurales_2').style['mix-blend-mode'] = 'normal';
+        var layer_Macrobasurales_2 = new L.geoJson(json_Macrobasurales_2, {
             attribution: '',
             interactive: true,
-            dataVar: 'json_Macrobasurales_3',
-            layerName: 'layer_Macrobasurales_3',
-            pane: 'pane_Macrobasurales_3',
-            onEachFeature: pop_Macrobasurales_3,
-            style: style_Macrobasurales_3_0,
+            dataVar: 'json_Macrobasurales_2',
+            layerName: 'layer_Macrobasurales_2',
+            pane: 'pane_Macrobasurales_2',
+            onEachFeature: pop_Macrobasurales_2,
+            style: style_Macrobasurales_2_0,
         });
-        bounds_group.addLayer(layer_Macrobasurales_3);
-        map.addLayer(layer_Macrobasurales_3);
-        function pop_Microbasurales_4(feature, layer) {
+        bounds_group.addLayer(layer_Macrobasurales_2);
+        map.addLayer(layer_Macrobasurales_2);
+        function pop_Microbasurales_3(feature, layer) {
             var popupContent = '<table>\
                     <tr>\
                         <td class="visible-with-data" id="Nombre" colspan="2"><strong>Nombre</strong><br />' + (feature.properties['Nombre'] !== null ? autolinker.link(String(feature.properties['Nombre']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
@@ -291,9 +280,9 @@
 			layer.bindPopup(content, { maxHeight: 400 });
         }
 
-        function style_Microbasurales_4_0() {
+        function style_Microbasurales_3_0() {
             return {
-                pane: 'pane_Microbasurales_4',
+                pane: 'pane_Microbasurales_3',
                 opacity: 1,
                 color: 'rgba(35,35,35,1.0)',
                 dashArray: '',
@@ -306,20 +295,69 @@
                 interactive: true,
             }
         }
-        map.createPane('pane_Microbasurales_4');
-        map.getPane('pane_Microbasurales_4').style.zIndex = 404;
-        map.getPane('pane_Microbasurales_4').style['mix-blend-mode'] = 'normal';
-        var layer_Microbasurales_4 = new L.geoJson(json_Microbasurales_4, {
+        map.createPane('pane_Microbasurales_3');
+        map.getPane('pane_Microbasurales_3').style.zIndex = 403;
+        map.getPane('pane_Microbasurales_3').style['mix-blend-mode'] = 'normal';
+        var layer_Microbasurales_3 = new L.geoJson(json_Microbasurales_3, {
             attribution: '',
             interactive: true,
-            dataVar: 'json_Microbasurales_4',
-            layerName: 'layer_Microbasurales_4',
-            pane: 'pane_Microbasurales_4',
-            onEachFeature: pop_Microbasurales_4,
-            style: style_Microbasurales_4_0,
+            dataVar: 'json_Microbasurales_3',
+            layerName: 'layer_Microbasurales_3',
+            pane: 'pane_Microbasurales_3',
+            onEachFeature: pop_Microbasurales_3,
+            style: style_Microbasurales_3_0,
         });
-        bounds_group.addLayer(layer_Microbasurales_4);
-        map.addLayer(layer_Microbasurales_4);
+        bounds_group.addLayer(layer_Microbasurales_3);
+        map.addLayer(layer_Microbasurales_3);
+        function pop_MicrobasuralesDispersos_4(feature, layer) {
+            var popupContent = '<table>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['Name'] !== null ? autolinker.link(String(feature.properties['Name']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                    </tr>\
+                </table>';
+            var content = removeEmptyRowsFromPopupContent(popupContent, feature);
+			layer.on('popupopen', function(e) {
+				addClassToPopupIfMedia(content, e.popup);
+			});
+			layer.bindPopup(content, { maxHeight: 400 });
+        }
+
+        function style_MicrobasuralesDispersos_4_0() {
+            return {
+                pane: 'pane_MicrobasuralesDispersos_4',
+                radius: 4.0,
+                opacity: 1,
+                color: 'rgba(0,0,0,1.0)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 2.0,
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(244,109,33,1.0)',
+                interactive: true,
+            }
+        }
+        map.createPane('pane_MicrobasuralesDispersos_4');
+        map.getPane('pane_MicrobasuralesDispersos_4').style.zIndex = 404;
+        map.getPane('pane_MicrobasuralesDispersos_4').style['mix-blend-mode'] = 'normal';
+        var layer_MicrobasuralesDispersos_4 = new L.geoJson(json_MicrobasuralesDispersos_4, {
+            attribution: '',
+            interactive: true,
+            dataVar: 'json_MicrobasuralesDispersos_4',
+            layerName: 'layer_MicrobasuralesDispersos_4',
+            pane: 'pane_MicrobasuralesDispersos_4',
+            onEachFeature: pop_MicrobasuralesDispersos_4,
+            pointToLayer: function (feature, latlng) {
+                var context = {
+                    feature: feature,
+                    variables: {}
+                };
+                return L.circleMarker(latlng, style_MicrobasuralesDispersos_4_0(feature));
+            },
+        });
+        bounds_group.addLayer(layer_MicrobasuralesDispersos_4);
+        map.addLayer(layer_MicrobasuralesDispersos_4);
         function pop_ContenedoresAiresdelOeste_5(feature, layer) {
             var popupContent = '<table>\
                     <tr>\
@@ -492,10 +530,10 @@
             {label: '<img src="legend/Generadores_7.png" /> Generadores', layer: layer_Generadores_7},
             {label: '<img src="legend/Puntosdevuelcotransitorio_6.png" /> Puntos de vuelco transitorio', layer: layer_Puntosdevuelcotransitorio_6},
             {label: '<img src="legend/ContenedoresAiresdelOeste_5.png" /> Contenedores Aires del Oeste', layer: layer_ContenedoresAiresdelOeste_5},
-            {label: '<img src="legend/Microbasurales_4.png" /> Microbasurales', layer: layer_Microbasurales_4},
-            {label: '<img src="legend/Macrobasurales_3.png" /> Macrobasurales', layer: layer_Macrobasurales_3},
-            {label: '<img src="legend/LimiteGC_2.png" /> Limite GC', layer: layer_LimiteGC_2},
-            {label: "Argenmap", layer: layer_Argenmap_1, radioGroup: 'bm' },
+            {label: '<img src="legend/MicrobasuralesDispersos_4.png" /> Microbasurales Dispersos', layer: layer_MicrobasuralesDispersos_4},
+            {label: '<img src="legend/Microbasurales_3.png" /> Microbasurales', layer: layer_Microbasurales_3},
+            {label: '<img src="legend/Macrobasurales_2.png" /> Macrobasurales', layer: layer_Macrobasurales_2},
+            {label: '<img src="legend/LimiteGC_1.png" /> Limite GC', layer: layer_LimiteGC_1},
             {label: "Google Satelital", layer: layer_GoogleSatelital_0, radioGroup: 'bm' },]
         var lay = L.control.layers.tree(null, overlaysTree,{
             //namedToggle: true,
@@ -508,6 +546,16 @@
         });
         lay.addTo(map);
         setBounds();
+        resetLabels([layer_Macrobasurales_2]);
+        map.on("zoomend", function(){
+            resetLabels([layer_Macrobasurales_2]);
+        });
+        map.on("layeradd", function(){
+            resetLabels([layer_Macrobasurales_2]);
+        });
+        map.on("layerremove", function(){
+            resetLabels([layer_Macrobasurales_2]);
+        });
         </script>        
     </body>
 </html>
